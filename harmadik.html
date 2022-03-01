@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Űrlap óra</title>
+</head>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<body><!--
+<form method="get" action="/feldogoz">-->
+<form method="post" action="https://www.pelda.hu/feldogoz" id="form1">
+
+    <div class="g-recaptcha" data-sitekey="6LesM6oeAAAAAEKzgmPZS2QdM_xMrcFbK9hgaWSP"></div>
+    <fieldset >
+        <legend>Alap adatok</legend>
+    <label for="vezeteknev">Vezetéknév:</label><br>
+    <input type="text" name="vezeteknev" id="vezeteknev"
+           placeholder="Ide kerül a vezetékneved"/>
+    <br>
+    <label for="keresztnev">Keresztnév:</label><br>
+    <input type="text" name="keresztnev" id="keresztnev" value="Béla"/>
+
+    </fieldset>
+    <br>
+    <label for="jelszo">Jelszó:</label><br>
+    <input type="password" name="jelszo" id="jelszo"/><br>
+
+
+
+    <input type="submit" value="Küldés"/>
+
+    <input type="radio" name="kedvenc" id="html"
+           value="HTML" checked/><label for="html">HTML</label>
+    <input type="radio" name="kedvenc" id="css"
+           value="CSS"/><label for="css">CSS</label>
+    <input type="radio" name="kedvenc" id="javascript"
+           value="JAVASCRIPT"/><label for="javascript">Javascript</label>
+    <label for="orul">Örül?</label>
+    <input type="checkbox" id="orul" name="orul" checked/>
+
+    <label for="szin">Kedvenc szín:</label>
+    <input type="color" id="szin" name="szin" value="#F0F8FF"/>
+
+    <label for="szuletesi_datum">Születési dátum:</label>
+    <input type="date" id="szuletesi_datum" name="szuletesi_datum"
+           min="1950-01-01" max="2010-01-01" value="2000-12-19"/>
+
+    <label for="meeting">Mikor legyen a meeting:</label>
+    <input type="datetime-local" id="meeting" name="meeting" max="2022-03-16T19:28"/>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+<label for="file">Feltöltés:</label>
+    <input type="file" id="file" name="file" accept=".doc, .docx,.xls, .xlsx" multiple>
+
+    <input type="month" name="felev" id="felev">
+    <label for="felev"> hónapban kezdődik a félév</label>
+    <br>
+    <br>
+    <label for="kor">Kor:</label>
+    <input type="number" name="kor" id="kor" min="18" max="120" step="2">
+    <br>
+    <label for="ertekeles">Értékelés:</label>
+    <input type="range" name="ertekeles" id="ertekeles" min="0"
+           max="10" value="0" step="0.01" oninput="amount.value=ertekeles.value">
+    <output id="amount" name="amount" for="ertekeles">0</output>
+
+    <label for="ido">Óra kezdete:</label>
+    <input id="ido" type="time" name="ido" max="20:00" min="07:00" step="600">
+
+    <label for="iranyitoszam">Irányítószám:</label>
+    <input id="iranyitoszam" name="iranyitoszam" required
+           type="text" pattern="[1-9][0-9]{3}">
+
+
+    <select id="nem"  name="nem">
+        <option value="ferfi">Férfi</option>
+        <option value="no" selected>Nő</option>
+        <option value="egyeb">Egyéb</option>
+    </select>
+    <select id="nem" multiple name="nem" size="2">
+        <option value="ferfi">Férfi</option>
+        <option value="no" selected>Nő</option>
+        <option value="egyeb">Egyéb</option>
+    </select>
+<input list="nem2" name="nem2">
+    <datalist id="nem2">
+        <option value="ferfi"></option>
+        <option value="no"></option>
+    </datalist>
+
+    <textarea name="uzenet" rows="10" cols="29">Szia</textarea>
+</form>
+
+<label for="proba"> Próba a formon kívüli elemre</label>
+<input type="text" name="proba" id="proba" form="form1">
+</body>
+</html>
