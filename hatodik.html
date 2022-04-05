@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript alapok</title>
+    <script src="js/sajat.js" charset="utf-8"></script>
+    <script>
+
+        //alert("Szia")
+        console.log("Hello")
+        /*var nev = prompt("Mi a neved", "Némó");
+        alert("Hello "+nev);*/
+        var fruits = ["Narancs","Körte","Szilva","Cseresznye"];
+        //console.log(fruits);
+       // console.log(fruits[2])
+        //fruits[10]="Alma";
+        //console.log(fruits);
+        //console.log(fruits[8])
+       /* for (var i =0; i < fruits.length; i++){
+            console.log(fruits[i]);
+        }
+
+        for( var i in fruits){
+            console.log(fruits[i])
+        }*/
+
+       /* fruits.forEach(f => console.log(f));
+
+        delete fruits[1];
+        fruits.splice(1,1);*/
+        /*console.log(fruits);
+        fruits.sort().reverse();
+        console.log(fruits);*/
+
+        var car1 = {tipus:"Volvo", ev:2016};
+       /* car1.uzemanyag= "Benzin";
+        console.log(car1.tipus+", "+car1.ev+ ", "+car1.uzemanyag);
+        delete car1.ev;
+        console.log(car1.tipus+", "+car1.ev+ ", "+car1.uzemanyag);
+        console.log(car1);*/
+        var car2 = {tipus:"BMW",ev:2018, uzemanyag:"benzin"};
+        var car3 = {tipus:"Kia",ev:2014};
+        var cars = [car1,car2,car3];
+       /* console.log(cars);
+        for (var i = 0; i  < cars.length; i++){
+            console.log(cars[i].tipus+" "+cars[i].ev);
+        }
+        cars.sort((a,b) => b.ev - a.ev);
+        console.log(cars);*/
+        console.log(sum(2,3));
+
+        for(let kocsi of cars){
+            for(let kulcs in kocsi){
+                console.log(kulcs.toString()+" "+ kocsi[kulcs]);
+            }
+        }
+
+    </script>
+
+
+</head>
+<body onload='koszon(" Üdv Újra itt");' onkeydown='koszon("Lenyomtad a gombot");'>
+<h1 onclick="koszon('Cica')">Szia</h1>
+<h2 onmouseover="console.log('Miau')">Cica</h2>
+<h1 onclick="szovegValtoztats(this)">Ez a szöveg legyen átírva</h1>
+</body>
+</html>

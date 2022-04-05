@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS bonyolultabb szelektorok példa</title>
+    <link rel="stylesheet" href="css/bonyolultabb.css">
+</head>
+<body>
+<div>
+    <div>Ez a div</div>
+    <h1 id="elso">Ez egy h1</h1>
+    <span> Ez a paragrafusom
+    <h1>nagyon </h1> szép</span>
+    <h1>Hello World</h1>
+</div>
+
+
+
+<p>
+    Ebben a paragrafusban</p>
+<p>Van ez a paragrafus</p>
+<img id="lebeg" src="images/cats/cicak.jfif"/>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+</p>
+<h1>
+    Nagyon
+</h1>
+
+<ol>
+    <li>Béla</li>
+    <li>Vilmos</li>
+    <li>Dávid</li>
+</ol>
+
+<ul>
+    <li>Béla</li>
+    <li>Vilmos</li>
+    <li>Dávid</li>
+    <li>Dávid</li>
+    <li>Vilmos</li>
+    <li>Dávid</li>
+    <li>Dávid</li>
+</ul>
+
+<a href="http://www.index.hu">Index kezdőlapja</a> <br>
+<a href="http://www.google.hu">Google kezdőlapja</a>
+
+<form>
+   <label for="nev">Név:</label>  <input id="nev" type="text" required> <br>
+    <label> Kor: </label><input type="number" min="16" max="99" required> <br>
+    Rendszám: <input type="text" pattern="^[A-Za-z]{3}-[0-9]{3}$">
+</form>
+
+<table border="2px solid black">
+    <caption style="background-color: #c4abab">Saját táblázatom</caption>
+    <THEAD>
+    <tr>
+        <th rowspan="2">Sorszám</th>
+        <th rowspan="2">Név</th>
+        <th colspan="2">Pont</th>
+    </tr>
+    <tr>
+        <th>Aktuális</th>
+        <th>Végső</th>
+    </tr>
+    </THEAD>
+    <TBODY>
+    <tr>
+        <td>1.</td>
+        <td>Béla</td>
+        <td colspan="2" style="text-align:center">85</td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td>Józsi</td>
+        <td>80</td>
+        <td>82</td>
+    </tr>
+    <tr>
+        <td rowspan="2">3.</td>
+        <td>Feri</td>
+        <td>76</td>
+        <td rowspan="2">76</td>
+    </tr>
+    <tr>
+        <td>Árpi</td>
+        <td>74</td>
+    </tr>
+    </TBODY>
+</table>
+</body>
+</html>

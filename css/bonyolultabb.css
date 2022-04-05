@@ -1,0 +1,137 @@
+div h1 {
+    background-color: #c4abab;
+}
+
+div > h1 {
+    color: aquamarine;
+}
+
+div + h1 {
+    font-style: italic;
+}
+
+div ~ h1 {
+    text-decoration: underline
+}
+
+a:link {
+    color: green;
+}
+
+a:visited {
+    color: brown;
+}
+
+a:hover {
+    background-color: yellow;
+}
+
+#elso:hover {
+    font-size: xxx-large;
+}
+
+li:first-child {
+    background-color: green;
+}
+
+input:required {
+    background-color: darkseagreen;
+}
+
+input:optional {
+    background-color: #c4abab;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+
+input:valid {
+    color: darkorange;
+}
+
+input:invalid{
+    color: pink;
+}
+
+input:in-range {
+    color: darkmagenta
+}
+input:out-of-range
+{
+    color: saddlebrown;
+}
+
+h1:not(#elso){
+    text-decoration: line-through;
+}
+
+body :not(p){
+    text-align: right ;
+}
+
+p::after{
+   content: "... Tovább";
+}
+
+label[for]::before {
+    content: "!!! ";
+}
+
+
+p::first-letter{
+    font-size: xx-large;
+    font-family: Vivaldi;
+}
+
+
+p::first-line{
+    background-color: pink;
+}
+
+ul li::marker{
+    color: blue
+}
+
+::selection{
+    background-color: #c4abab;
+    color: aquamarine;
+}
+
+input[type="number"]{
+    text-align: center;
+}
+
+tbody tr:nth-child(even){
+    background-color: #c4abab;
+}
+
+tbody tr:nth-child(odd){
+    background-color: darkgrey;
+}
+
+td[colspan], td[rowspan]{
+    background-color: #fafafa;
+}
+li:nth-child(3n-1){
+    background-color: darkgrey;
+}
+
+td {
+    padding: 0px 25px 0px 25px;
+}
+
+#lebeg{
+    width: 100px;
+    float: right;
+
+}
+
+#elso {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}

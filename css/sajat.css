@@ -1,0 +1,12 @@
+
+@font-face {
+    font-family: 'YourFontName'; /*a name to be used later*/
+    src: url('http://domain.com/fonts/font.ttf'); /*URL to font*/
+}
+* {
+    font-family: "Lucida Handwriting";
+}
+
+h1 {
+   border: aquamarine dashed thick;
+}
