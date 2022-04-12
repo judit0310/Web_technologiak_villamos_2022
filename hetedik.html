@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var koszones = function koszonj() {
+            var name = prompt("Mi a neved", "Nemo");
+            if (name == null || name.trim() == "") {
+                document.getElementById("ide").innerHTML =
+                    "Nem tudom ki vagy";
+            } else {
+                document.getElementById("ide").innerHTML =
+                    "Szia " + name + ", hogy vagy ma?";
+            }
+        }
+        window.addEventListener("load", function () {
+            /* var gomb = document.getElementById("indito");
+             gomb.addEventListener("click", koszones);*/
+            document.getElementById("indito").onclick = koszones;
+
+            var gyumolcs = ['Szilva', 'Körte', 'Cseresznye'];
+            var text = "<ul>";
+            for (gyumi of gyumolcs) {
+                text += "<li>" + gyumi + "</li>";
+            }
+            text += "</ul>";
+
+            document.getElementById("lista").innerHTML = text;
+            console.log(document);
+        })
+
+        function osszead() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = Number(document.getElementById("b").value);//~~ csak intre, parseInt is
+            var eredmeny = a + b;
+            document.getElementById("eredmeny").value = eredmeny;
+            document.getElementById("eredmeny2").innerHTML = eredmeny;
+        }
+
+        function hozzaad() {
+            var ujgyumi = document.getElementById("uj").value;
+            if(ujgyumi.trim() == ""){
+                document.getElementById("hiba").innerHTML="Üres mező";
+                document.getElementById("uj").value = "";
+                return;
+            }
+            document.getElementById("hiba").innerHTML="";
+
+            var lista = document.getElementById("lista").firstChild;
+            var meglevoElemek = lista.childNodes;
+            console.log(meglevoElemek);
+            var marszerepel = false;
+
+            for(elem of meglevoElemek){
+                if(elem.innerHTML.toUpperCase() == ujgyumi.toUpperCase()){
+                    marszerepel = true;
+                }
+            }
+            if (!marszerepel) {
+                var ujelem = document.createElement("li");
+                ujelem.innerHTML = ujgyumi;
+                lista.appendChild(ujelem);
+                document.getElementById("uj").value = "";
+            }else{
+                document.getElementById("hiba").innerHTML="A "+ujgyumi+" " +
+                    "már szerepel a listában";
+                document.getElementById("uj").value = "";
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+<button id="indito">Indít</button>
+<p id="ide"></p>
+<p id="lista"></p>
+
+A = <input id="a" type="number" value="0"><br>
+B = <input id="b" type="number" value="0"><br>
+<button id="osszead" onclick="osszead()">Eredmény</button>
+Összeg = <input id="eredmeny"></input><span id="eredmeny2"></span>
+<br>
+<br>
+
+<form onsubmit="return false;">
+    Új gyümölcs: <input type="text" id="uj" required><span id="hiba"></span><br>
+    <!--<button onclick="hozzaad()">Hozzáadás</button>-->
+    <input type="submit" value="Hozzáadás" onclick="hozzaad()">
+</form>
+</body>
+</html>
