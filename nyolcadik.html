@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Űrlap validálás óra</title>
+    <script src="js/ellenorzo.js" charset="utf-8"></script>
+</head>
+<style>
+    @keyframes pulse {
+        0% {
+            background-color: #001F3F;
+        }
+        50% {
+            background-color: #FF4136;
+        }
+    100%{
+        background-color: #001F3F;
+    }
+    }
+</style>
+<body id="body">
+
+<h1>Űrlap adatok</h1>
+
+<form action="/feldolgoz" onsubmit="return validal()" id="adatok">
+    <fieldset>
+        <legend>Alap adatok</legend>
+        <label for="vezeteknev">Vezetéknév</label>
+        <input type="text" id="vezeteknev" name="vezeteknev"><br>
+        <label for="keresztnev">Keresztnév</label>
+        <input type="text" id="keresztnev" name="keresztnev"><br>
+        <label for="anyja_neve">Anyja neve</label>
+        <input type="text" id="anyja_neve" name="anyja_neve"><br>
+        <label for="szuletesi_datum">Születési dátum</label>
+        <input type="date" id="szuletesi_datum" name="szuletesi_datum"
+               min="1900-01-01">
+    </fieldset>
+    <label for="szin">Kedvenc szín</label>
+    <input type="color" id="szin" name="szin" value="#fafafa"><br>
+    <label for="profilkep">Profilkép</label>
+    <input type="file" required id="profilkep" name="profilkep"
+           accept=".jpeg, .jpg,.png, .bmp, .jfif, .gif"><br>
+    <label for="jelszo">Jelszó</label>
+    <input type="password" id="jelszo" name="jelszo"><br>
+    <input type="submit" value="Elküldés">
+</form>
+<button id="megjelenites" onclick="megjelenit()">Megjelenítés</button>
+<img src="images/cats/cicak.jfif" id="cica" style="display:
+none;position:fixed;top:25%;left:25%;width: 50%">
+<img src="images/cats/cicak.jfif" id="cica2" style="display:none">
+<img src="favicon.ico" class="villog" style="display:none">
+</body>
+</html>
